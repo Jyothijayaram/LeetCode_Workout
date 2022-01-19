@@ -1,11 +1,6 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        nums.sort()
-        for i in range(len(nums)):
-            if i== nums[i]:
-                continue
-            else:
-                return i
-        return i+1
+        n=len(nums) # find the no of elements in list
+        return int((n+1)/2 * n-sum(nums))
         
         
