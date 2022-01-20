@@ -1,6 +1,7 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        import functools as f
-        return f.reduce(lambda a,b: a^b ,nums)
-            
+        res=0
+        for i in nums:
+            res^=i
+        return res 
         
