@@ -2,20 +2,20 @@
 
 class Solution:
     def majorityElement(self, A, N):
-        m = {}
-        for i in A:
+        if N==1:
+            return A[0]
             
-            if i in m:
-                m[i] += 1
+        dictt={}
+        
+        for i in A:
+            if i in dictt:
+                dictt[i]=dictt[i]+1
+                
+                if dictt[i] > N/2:
+                    return i
             else:
-                m[i] = 1
-        count = 0
-        for key in m:
-            if m[key] > N / 2:
-                count = 1
-                return key
-        if(count == 0):
-            return -1
+                dictt[i]=1
+        return -1
         
         #Your code here
 
