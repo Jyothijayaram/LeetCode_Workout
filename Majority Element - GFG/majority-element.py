@@ -3,12 +3,12 @@
 class Solution:
     def majorityElement(self, A, N):
         m = {}
-        for i in range(N):
+        for i in A:
             
-            if A[i] in m:
-                m[A[i]] += 1
+            if i in m:
+                m[i] += 1
             else:
-                m[A[i]] = 1
+                m[i] = 1
         count = 0
         for key in m:
             if m[key] > N / 2:
