@@ -2,7 +2,7 @@
 
 class Solution:
     def modify(self, s):
-        return "".join(s.split())
+        return s.replace(" ","")
         # code here
 
 #{ 
