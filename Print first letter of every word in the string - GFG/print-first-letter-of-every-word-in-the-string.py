@@ -2,12 +2,7 @@
 class Solution:
 	def firstAlphabet(self, S):
 		# code here
-		s=S.split()
-		stg=""
-		for i in s:
-		    stg=stg+i[0]
-		return stg
-
+			return "".join(list(map(lambda a: a[0], S.split())))
 #{ 
 #  Driver Code Starts
 #Initial Template for Python 3
