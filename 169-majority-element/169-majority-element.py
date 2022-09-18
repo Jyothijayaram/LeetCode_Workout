@@ -2,10 +2,12 @@ class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         dic={}
         for ele in nums:
-            if ele not in dic:
-                dic[ele]=nums.count(ele)
-        return max(dic,key=dic.get)
+            dic[ele]=dic.get(ele,0)+1
+            
+        for key,val in dic.items():
+            if val > len(nums)//2:
+                return key
         
-                    
+       
             
         
