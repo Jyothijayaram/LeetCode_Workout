@@ -1,9 +1,4 @@
 class Solution:
     def checkIfPangram(self, sentence: str) -> bool:
-        character= ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-        for c in range(len(character)):
-            if character[c] not in sentence:
-                return 0
-        else:
-            return 1
-                 
+        return len(set(sentence))==26
+    
