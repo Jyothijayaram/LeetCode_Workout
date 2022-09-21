@@ -7,6 +7,6 @@ class Solution:
                     h[c]=1
             return sum(h.values())==26
          
-        else:
-            return False
+#         else:
+#             return False
         
