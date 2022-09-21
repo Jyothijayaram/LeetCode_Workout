@@ -4,6 +4,6 @@ class Solution:
         for c in character:
             if c not in sentence:
                 return 0
-        return 1
-                
-        
+        else:
+            return 1
+                 
