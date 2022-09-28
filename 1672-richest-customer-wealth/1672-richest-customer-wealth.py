@@ -1,6 +1,12 @@
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
-        large=0
-        for p in accounts:
-            large=max(sum(p), large)
-        return large
+        maxi=0
+        for customer in accounts:
+            ans=0
+            for wealth in customer:
+                ans+=wealth
+            if ans>maxi:
+                maxi=ans
+        return maxi
+    
+    
