@@ -1,8 +1,16 @@
 class Solution:
     def numberOfSteps(self, num: int) -> int:
-        bin_num_len=bin(num)[2:]
-        return len(bin_num_len)-1+bin_num_len.count('1')
-        
-        
+        def helper(num,count):
+            if num<1:
+                return count
+            if num % 2==0:
+                return helper(num//2,count+1)
+            else:
+                return helper(num-1,count+1)
+        return helper(num,0)
+            
+                
+                
+       
     
         
