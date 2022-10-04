@@ -3,7 +3,6 @@ class Solution:
         dic={}
         c=0
         for s in stones:
-         
                 if s in dic:
                     dic[s]+=1
                 else:
