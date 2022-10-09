@@ -1,12 +1,13 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        n,result = len(nums),[]
-        
-        def powerSet(nums, i, subSet): 
-            if i==n:
-                result.append(subSet) 
-                return 
-            powerSet(nums, i+1, subSet) 
-            powerSet(nums, i+1, subSet + [nums[i]]) 
-        powerSet(nums, 0, [])
-        return result 
+        n=len(nums)
+        ans=[]
+        def helper(nums,index,res):
+            if index==n:
+                ans.append(res)
+                return
+            helper(nums,index+1,res+[nums[index]])
+            helper(nums,index+1,res)
+        helper(nums,0,[])
+        return ans
+       
